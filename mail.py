@@ -4,13 +4,15 @@ import os
 load_dotenv()
 email_from = 'daniils.panasyuk@yandex.ru'
 email_to = 'ivand650@gmail.com'
-letter = ("""
+message = """
 From:{0}
-To: {1}
-Subject: Приглашение!
-Content-Type: text/plain; charset="UTF-8";
-""").format(email_from, email_to)
-message = ("""
+ To: {1} 
+ Subject: Приглашение! 
+ Content-Type: text/plain; charset="UTF-8";
+""".format(email_from, email_to)
+
+
+"""
 Привет, %friend_name%! %my_name% приглашает тебя на сайт %website%!
 
 %website% — это новая версия онлайн-курса по программированию. 
@@ -27,11 +29,10 @@ message = ("""
 
 Регистрируйся → %website%  
 На курсы, которые еще не вышли, можно подписаться и получить уведомление о релизе сразу на имейл.
-""")
+"""
 message = message.replace("%website%", "https://dvmn.org/profession-ref-program/ivand650/DVBWt/")
 message = message.replace("%friend_name%", "Игорь")
 message = message.replace("%my_name%", "Ибрагим")
-letter = letter.encode("UTF-8")
 message = message.encode("UTF-8")
 server = smtplib.SMTP_SSL('smtp.yandex.ru', 465)
 server.login((os.environ['login']), (os.environ['password']))
