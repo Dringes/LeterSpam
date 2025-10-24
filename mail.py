@@ -9,10 +9,7 @@ From:{0}
  To: {1} 
  Subject: Приглашение! 
  Content-Type: text/plain; charset="UTF-8";
-""".format(email_from, email_to)
 
-
-"""
 Привет, %friend_name%! %my_name% приглашает тебя на сайт %website%!
 
 %website% — это новая версия онлайн-курса по программированию. 
@@ -29,7 +26,7 @@ From:{0}
 
 Регистрируйся → %website%  
 На курсы, которые еще не вышли, можно подписаться и получить уведомление о релизе сразу на имейл.
-"""
+""".format(email_from, email_to)
 message = message.replace("%website%", "https://dvmn.org/profession-ref-program/ivand650/DVBWt/")
 message = message.replace("%friend_name%", "Игорь")
 message = message.replace("%my_name%", "Ибрагим")
