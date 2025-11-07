@@ -2,7 +2,7 @@ import smtplib
 from dotenv import load_dotenv
 import os
 load_dotenv()
-email_from = 'daniils.panasyuk@yandex.ru'
+email_from = 'devmanorg@yandex.ru'
 email_to = 'ivand650@gmail.com'
 message = """
 From:{0}
@@ -36,4 +36,5 @@ server = smtplib.SMTP_SSL('smtp.yandex.ru', 465)
 server.login((os.environ['login']), (os.environ['password']))
 server.sendmail(email_from, email_to, message)
 server.quit() 
+
 
