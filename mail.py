@@ -10,6 +10,7 @@ To: {1}
 Subject: Приглашение! 
 Content-Type: text/plain; charset="UTF-8";
 
+
 Привет, %friend_name%! %my_name% приглашает тебя на сайт %website%!
 
 %website% — это новая версия онлайн-курса по программированию. 
@@ -35,5 +36,4 @@ server = smtplib.SMTP_SSL('smtp.yandex.ru', 465)
 server.login((os.environ['login']), (os.environ['password']))
 server.sendmail(email_from, email_to, message)
 server.quit() 
-
 
