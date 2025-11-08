@@ -32,7 +32,7 @@ message = message.replace("%friend_name%", "Игорь")
 message = message.replace("%my_name%", "Ибрагим")
 message = message.encode("UTF-8")
 server = smtplib.SMTP_SSL('smtp.yandex.ru', 465)
-server.login((os.environ['login']), (os.environ['password']))
+server.login(os.environ['login'], os.environ['password'])
 server.sendmail(email_from, email_to, message)
 server.quit() 
 
